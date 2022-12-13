@@ -9,6 +9,7 @@ parskip=full
 \usepackage[parfill]{parskip}
 \usepackage{lmodern}
 \usepackage{graphicx}
+\usepackage[center]{caption}
 
 \begin{document}
     \title{Werkzeuge für das wissenschaftliche Arbeiten}
@@ -22,19 +23,24 @@ parskip=full
     In dieser Aufgabe beschäftigen wir uns mit Objektorientierung in Python. Der Fokus liegt auf der Implementierung einer Klasse, dabei nutzen wir insbesondere auch Magic Methods.
 
         \subsection{Einleitung}
-        Ein Datensatz besteht aus mehreren Daten, ein einzelnes Datum wird durch ein Objekt der Klasse "DataSetItem" repräsentiert. Jedes Datum hat einen Namen (Zeichenkette), eine ID (Zahl) und bel. Inhalt. Nun sollen mehrere Daten, Objekte vom Typ "DataSetItem", in einem Datensatz zusammengefasst werden. 
+        Ein Datensatz besteht aus mehreren Daten, ein einzelnes Datum wird durch ein 	Objekt der Klasse "`DataSetItem"' repräsentiert. Jedes Datum hat einen Namen 	(Zeichenkette), eine ID (Zahl) und bel. Inhalt. Nun sollen mehrere Daten, Objekte 	vom Typ "`DataSetItem"', in einem Datensatz zusammengefasst werden. 
 
-        Sie haben sich schon auf eine Schnittstelle und die benötigen Operationen, die ein Datensatz unterstützen muss, geeinigt. 
+        Sie haben sich schon auf eine Schnittstelle und die benötigen Operationen, die 	ein Datensatz unterstützen muss, geeinigt. 
         
-        Es gibt eine Klasse "DataSetInterface", die die Schnittstelle definiert und Operationen jedes Datensatzes angibt. 
+        Es gibt eine Klasse "`DataSetInterface"', die die Schnittstelle definiert und 			Operationen jedes Datensatzes angibt. 
         
-        Bisher fehlt aber noch die Implementierung eines Datensatzes mit allen Operationen. Implementieren Sie eine Klasse "DataSet" als eine Unterklasse von "DataSetInterface".
+        Bisher fehlt aber noch die Implementierung eines Datensatzes mit allen 			Operationen. Implementieren Sie eine Klasse "`DataSet"' als eine Unterklasse 		von "`DataSetInterface"'.
 
         \subsection{Aufbau}
-        Es gibt drei Dateien, "dataset.py", "main.py" und "implementation.py" \footnote{\label{foot:1}Dateien befinden sich im Ordner "/code/" dieses Git-Repositories.}. In der "dataset.py" befinden sich die Klassen "DataSetInterface" und "DataSetItem", in der Datei "implementation.py" muss die Klasse "DataSet" implementiert werden. Die Datei "main.py" nutzt die Klassen "DataSet" und "DataSetItem" aus den jeweiligen Dateien und testet die Schnittstelle und Operationen von "DataSetInterface".
+        		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=10cm]{./../diagram/classes_files.png}
+			\caption{Darstellung der Klassenbeziehungen}
+		\end{figure}
+        Es gibt drei Dateien, "`dataset.py"', "`main.py"' und "`implementation.py"' 			\footnote{\label{foot:1}Dateien befinden sich im Ordner "`/code/"' dieses Git-		Repositories.}. In der "`dataset.py"' befinden sich die Klassen "`DataSetInterface"' 	und "`DataSetItem"', in der Datei "`implementation.py"' muss die Klasse 	"`DataSet"' implementiert werden. Die Datei "`main.py"' nutzt die Klassen 	"`DataSet"' und "`DataSetItem"' aus den jeweiligen Dateien und testet die 			Schnittstelle und Operationen von "`DataSetInterface"'.
 
         \subsection{Methoden}
-        Bei der Klasse "DataSet" sind insbesondere folgenden Methoden zu implementieren, die genaue Spezifikation finden Sie in der "dataset.py":
+        Bei der Klasse "`DataSet"' sind insbesondere folgenden Methoden zu 			implementieren, die genaue Spezifikation finden Sie in der "`dataset.py"':
 
         \begin{itemize}
             \item \_\_setitem\_\_(self, name, id\_content)
@@ -44,7 +50,7 @@ parskip=full
                 
             \item \_\_iadd\_\_(self, item)
                 \begin{itemize}
-                    \item [] Hinzufügen eines "DataSetItem"
+                    \item [] Hinzufügen eines "`DataSetItem"'
                 \end{itemize}
                 
             \item \_\_delitem\_\_(self, name)
@@ -89,7 +95,7 @@ parskip=full
                 \end{itemize}
         \end{itemize}
     \section{Abgabe}
-    Programmieren Sie die Klasse "DataSet" in der Datei "implementation.py" zur Lösung der oben beschrieben Aufgabe im VPL. Sie können auch direkt auf Ihrem Computer programmieren, dazu finden Sie alle drei benötigten Dateien zum Download im Moodle.
+    Programmieren Sie die Klasse "`DataSet"' in der Datei "`implementation.py"' zur Lösung der oben beschrieben Aufgabe im VPL. Sie können auch direkt auf Ihrem Computer programmieren, dazu finden Sie alle drei benötigten Dateien zum Download im Moodle.
 
-    Das VPL nutzt den gleichen Code, wobei die "main.py" um weitere Testfälle und Überprüfungen erweitert wurde. Die Überprüfungen dienen dazu sicherzustellen, dass Sie die richtigen Klassen nutzen.
+    Das VPL nutzt den gleichen Code, wobei die "`main.py"' um weitere Testfälle und Überprüfungen erweitert wurde. Die Überprüfungen dienen dazu sicherzustellen, dass Sie die richtigen Klassen nutzen.
 \end{document}
